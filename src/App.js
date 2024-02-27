@@ -10,6 +10,8 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Article from './pages/Article'
 import FormArticle from './pages/FormArticle'
+import EditArticle from './pages/EditArticle'
+import Login from './pages/Login'
 
 function App() {
   // const articles = [
@@ -33,6 +35,8 @@ function App() {
   //   }
   // ];
 
+  const uname = localStorage.getItem("uname");
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -42,6 +46,7 @@ function App() {
           <NavLink to="/about">About</NavLink>
           <NavLink to="/contact">Contact</NavLink>
           <NavLink to="/new">New Article</NavLink>
+          <NavLink to="/login">{uname ? "Logout" : "Login"}</NavLink>
         </nav>
 
         <Routes>
@@ -49,7 +54,9 @@ function App() {
           <Route path="/about" element={<About /> }/>
           <Route path="/contact" element={<Contact /> }/>
           <Route path="/articles/:urlId" element={<Article/> }/>
+          <Route path="/articles/edit/:urlId" element={<EditArticle /> }/>
           <Route path="/new" element={<FormArticle /> }/>
+          <Route path="/login" element={<Login /> }/>
           <Route path="/*" element={<Navigate to="/"/> }/>
         </Routes>
 
