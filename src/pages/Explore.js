@@ -12,7 +12,11 @@ export default function Explore() {
         getDocs(collection(db, "recipes"))
             .then((sn) => {
                 sn.docs.forEach((doc) => {
-                    setRecipes(prev => [...prev, doc.data()]);
+                    console.log(doc.id)
+                    setRecipes(prev => [...prev, {
+                        id: doc.id,
+                        ...doc.data()
+                    }]);
                 })
             })
     }, []);

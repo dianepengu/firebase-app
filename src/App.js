@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Favorites from './pages/Favorites';
 import Explore from './pages/Explore';
 import Login from './pages/Login';
+import RecipePage from './pages/RecipePage';
 
 function App() {
   const uname = localStorage.getItem("uname");
@@ -21,6 +22,8 @@ function App() {
               <Route path="/explore" element={<Explore />} />
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/login" element={<Login />} />
+
+              <Route path="/recipe/:id" element={<RecipePage />} />
               <Route path="/*" element={<Navigate to="/" />} />
             </Routes>
           </div>
