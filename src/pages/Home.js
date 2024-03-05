@@ -11,10 +11,6 @@ export default function Home() {
     return (
         <div className="flex flex-col w-full h-full gap-10">
             <div className="flex flex-col gap-2">
-                <h1 className="text-2xl font-semibold dark:text-black">Saved Recipes</h1>
-                <p className="text-md dark:text-gray-400">Recipes that you have saved</p>
-            </div>
-            <div className="flex flex-col gap-2">
                 <h1 className="text-2xl font-semibold dark:text-black">Uploaded Recipes</h1>
                 <p className="text-md dark:text-gray-400">Recipes that you have uploaded</p>
             </div>
