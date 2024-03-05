@@ -22,7 +22,7 @@ export default function RecipeCard({ data }) {
             <Link to={`/recipe/${data.id}`}>
                 <div className="relative shrink w-full rounded-md">
                     <img
-                        className="w-full h-full rounded-md"
+                        className="w-full aspect-video rounded-md"
                         src={`${data.picURL}`}
                     />
                     <div className="absolute bottom-2 left-2 flex items-center justify-center gap-1 px-2 py-1 rounded-lg bg-slate-200">

@@ -21,6 +21,16 @@ export default function RecipePage() {
                 <h1 className="text-2xl font-semibold dark:text-black">{recipe.name}</h1>
                 <p className="text-md dark:text-gray-400">{recipe.description}</p>
             </div>
+            <div className="w-full">
+                <img
+                    className="w-1/2 aspect-video rounded-md shadow-lg"
+                    src={recipe.picURL}
+                />
+            </div>
+            <div className="flex flex-col gap-2">
+                <h1 className="text-2xl font-semibold dark:text-black">Ingredients</h1>
+                
+            </div>
         </div>
     )
 }
